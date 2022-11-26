@@ -1,0 +1,82 @@
+@media screen and (min-width: 400px) {
+    body {
+        background-color: rgb(238, 213, 144);
+
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: rgb(144, 182, 238);
+    }
+}
+
+@media screen and (min-width: 650px) {
+    body {
+        background-color: rgb(238, 144, 171);
+    }
+
+    h1 {
+
+        color: brown;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: rgb(144, 207, 238);
+    }
+}
+
+.flex1 {
+    background-color: rgb(86, 255, 30);
+    color: white;
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+    text-align: center;
+    border: 2px black solid;
+}
+
+.container {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#btn {
+    background-color: blue;
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    font-size: 20px;
+    text-align: center;
+}
+
+#btn:hover{
+
+    background-color: rgb(255, 0, 4);
+    border: 1px solid;
+    color: rgb(20, 18, 18);
+    /* padding: 50px 50px; */
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#txt:active{
+
+    color: red;
+    background-color: blue;
+}
+#pass:active{
+
+    color: red;
+    background-color: blue;
+}
+#age:active{
+
+    color: red;
+    background-color: blue;
+}

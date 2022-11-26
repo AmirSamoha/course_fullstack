@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #hedear {
+            text-align: center;
+            animation: fade-in 2s;
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        }
+
+        #box {
+            align-items: center;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: change 5s infinite;
+            animation-duration: 5s;
+        }
+
+        @keyframes change {
+            0% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: bisque;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: black;
+                left: 200px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: brown;
+                left: 0px;
+                top: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="hedear">Welcome to my page</h1>
+
+    <div id="box">
+        practice
+    </div>
+
+
+
+</body>
+
+</html>

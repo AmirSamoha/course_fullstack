@@ -1,0 +1,59 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Style the container using flex */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Style the header and stick it to the top of the page and always be showing */
+#hw{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgb(160, 169, 52);
+    color: #f2f2f2;
+    text-align: center;
+}
+
+/* Style the content to the center of the page*/
+.content {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Style the input fields */
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+/* Style the submit button when it is hovered */
+input[type=text]{
+    text-align: center;
+    background-color: #9cb99d;
+}
+
+p {
+    font-size: xx-large;
+    font-weight: bolder;
+}
