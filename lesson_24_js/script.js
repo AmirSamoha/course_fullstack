@@ -6,7 +6,7 @@
 //  * 3X3 מטריצה
 //  *  */
 
-// //פונציה לבנייה מטריצה 
+// //פונקציה לבנייה מטריצה 
 
 // // const matrixBuild = (size) => {
 // //     let metrix = [];
@@ -21,7 +21,6 @@
 
 // // }
 // //console.log(matrixBuild(3));
-
 
 function matrixBuilder(size = 3, val = 0) {
     let matrix = []
