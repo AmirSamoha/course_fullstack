@@ -41,7 +41,7 @@ function ArrayToMatrix(arr, num) {
     return matrix;
 }
 
- 
+
 function checkForWin(matrix, symbol) {
     // this function check for all possible wining 
     let rows_c, col_c, diagonal_c, diagonalT_c; // counters 
