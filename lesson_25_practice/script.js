@@ -36,43 +36,39 @@ function ArrayToMatrix(arr, num) {
     return matrix;
 }
 
-
+ 
 function checkForWin(matrix, symbol) {
-    // Check for a win
-    // return true;
-    let Rcounter, Ccounter, Acounter, TAcounter;
+    // this function check for all possible wining 
+    let rows_c, col_c, diagonal_c, diagonalT_c; // counters 
 
-    for (let i = 0; i < matrix.length; i++) {
-        Rcounter = 0;
-        Ccounter = 0;
-        Acounter = 0;
-        TAcounter = 0;
+    for (let i = 0; i < matrix.length; i++){
+        rows_c = 0, col_c = 0, diagonal_c = 0, diagonalT_c = 0; // set to zero every ittration on i
+        
+        for(let j = 0; j < matrix[i].length; j++){
 
-        for (let j = 0; j < matrix[i].length; j++) {
-
-            if (matrix[i][j].textContent == symbol) {
+            if(matrix[i][j].textContent == symbol){
                 // check for row
-                Rcounter++;
+                    rows_c++;
             }
 
-            if (matrix[j][i].textContent == symbol) {
-                // check coliu
-                Ccounter++;
+            if(matrix[j][i].textContent == symbol){
+                // check colum
+                    col_c++;
             }
-            if (matrix[j][j].textContent == symbol) {
-                Acounter++;
+            if(matrix[j][j].textContent == symbol){
+                // check main diagonal 
+                diagonal_c++;
             }
-            if (matrix[j][matrix.length - j - 1].textContent == symbol) {
-                TAcounter++;
+            if(matrix[j][matrix.length - j - 1].textContent == symbol){
+                diagonalT_c++;
             }
-
-        }
-        if (Rcounter == matrix.length ||
-            Ccounter == matrix.length ||
-            Acounter == matrix.length ||
-            TAcounter == matrix.length) {
-            return true;
             
+        }
+        if(rows_c == matrix.length || 
+            col_c == matrix.length ||
+            diagonal_c == matrix.length ||
+            diagonalT_c == matrix.length){
+            return true;
         }
     }
     return false;
@@ -83,15 +79,13 @@ function checkForWin(matrix, symbol) {
 
 
 
-function checkforTie(coArray) {
-    // Check for a tie
-    for (let i = 0; i < coArray.length; i++) {
-        if (!coArray.textContent === " ") {
+function checkforTie(array) {
+    for(let i = 0; i < array.length; i++){
+        if(array[i].textContent == ''){
             return false;
         }
-        return true;
     }
-
+    return true;
 }
 
 
@@ -106,39 +100,37 @@ buttonArray.forEach((button) => {
     coArray.push(button); // Push the buttons to the array
 });
 
-let matrix = ArrayToMatrix(coArray, 3); // Convert the array to a matrix
+let matrix = ArrayToMatrix(coArray, Math.floor(Math.sqrt(coArray.length))); // Convert the array to a matrix
 
 console.log(matrix);
 
 
 for (let i = 0; i < buttonArray.length; i++) { // Loop through the buttons and add an event listener to each one
 
-    buttonArray[i].addEventListener("click",
-        function () {
-            let symbol;
-            if (counter % 2 == 0 && buttonArray[i].textContent == "") {
-                buttonArray[i].textContent = "X";
-                counter++;
-                symbol = 'X';
-            } else if (counter % 2 != 0 && buttonArray[i].textContent == "") {
-                buttonArray[i].textContent = "O";
-                counter++;
-                symbol = 'O';
-            } else {
-                alert("This button is already clicked!");
-            }
-
-            if (checkForWin(matrix, symbol)) {
-                alert(`${symbol} has won`)
-                reset()
-            }
-            else {
-                (checkforTie(coArray)) 
-                    alert("tie")
-                    reset()
-                }
-            
-
+    buttonArray[i].addEventListener("click", 
+    function() {
+        let symbol;
+        if(counter % 2 == 0 && buttonArray[i].textContent == "") {
+            buttonArray[i].textContent = "X";
+            counter++;     
+            symbol = 'X';
+        }else if(counter % 2 != 0 && buttonArray[i].textContent == "") {
+            buttonArray[i].textContent = "O";
+            counter++;
+            symbol = 'O';
+        }else{
+            alert("This button is already clicked!");
         }
-    );
+
+        if(checkForWin(matrix, symbol)){
+            alert(`${symbol} has won`)
+            reset()
+        }
+
+        if(checkforTie(coArray)){
+            alert("no body won it was a Tie!")
+        }
+        
+    }
+);
 }
