@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,36 +9,44 @@
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+
+<body id="body">
+
+    <div class="namep ">player X <span id="player_name_X"> (name)</span> = <span id="player_X">0</span> win game!</div>
+    <div class="namep " id="name_o">player O <span id="player_name_O"> (name)</span> = <span id="player_O">0</span> win
+        game!</div>
+    <button id="btn_name" onclick="namesPlayers()">play with names</button><br><br><br>
     <!-- create a 3 X 3 table with botton in every box -->
     <div class="container">
-            <div class="table_div">
-                <table>
-                    <tr>
-                        <td><button class="btn" id="btn1"></button></td>
-                        <td><button class="btn" id="btn2"></button></td>
-                        <td><button class="btn" id="btn3"></button></td>
-                    </tr>
-                    <tr>
-                        <td><button class="btn" id="btn4"></button></td>
-                        <td><button class="btn" id="btn5"></button></td>
-                        <td><button class="btn" id="btn6"></button></td>
-                    </tr>
-                    <tr>
-                        <td><button class="btn" id="btn7"></button></td>
-                        <td><button class="btn" id="btn8"></button></td>
-                        <td><button class="btn" id="btn9"></button></td>
-                    </tr>
-                </table>
-            </div>
+        <div class="table_div">
+            <table>
+                <tr>
+                    <td><button class="btn " id="btn1"></button></td>
+                    <td><button class="btn " id="btn2"></button></td>
+                    <td><button class="btn " id="btn3"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn " id="btn4"></button></td>
+                    <td><button class="btn " id="btn5"></button></td>
+                    <td><button class="btn " id="btn6"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn " id="btn7"></button></td>
+                    <td><button class="btn " id="btn8"></button></td>
+                    <td><button class="btn " id="btn9"></button></td>
+                </tr>
+            </table>
+        </div>
         <div class="side_manu">
-            <button id="reset_btn" onclick="reset()">Reset</button>
+            <button id="reset_btn" onclick="reset()">Reset game</button>
+            <button id="clear" onclick="clear()">Reset All</button>
         </div>
     </div>
- 
 
 
-   
-    
+
+
+
 </body>
+
 </html>

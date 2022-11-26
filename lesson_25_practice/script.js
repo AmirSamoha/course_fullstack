@@ -20,6 +20,11 @@ function reset() {
     counter = 0;
 }
 
+ 
+
+
+
+
 function ArrayToMatrix(arr, num) {
     // Convert an array to a matrix for easier mental math
     let matrix = [], i, k;
@@ -104,6 +109,19 @@ let matrix = ArrayToMatrix(coArray, Math.floor(Math.sqrt(coArray.length))); // C
 
 console.log(matrix);
 
+let counter_X = 0;
+let counter_O = 0;
+let player_X = 0;
+let player_O = 0;
+
+const namesPlayers = () =>{
+    let playerName_X =prompt("player X what is your name?");
+    let playerName_O =prompt("player O what is your name?");
+
+    document.getElementById("player_name_X").textContent = playerName_X;
+    document.getElementById("player_name_O").textContent = playerName_O;
+}
+
 
 for (let i = 0; i < buttonArray.length; i++) { // Loop through the buttons and add an event listener to each one
 
@@ -124,12 +142,22 @@ for (let i = 0; i < buttonArray.length; i++) { // Loop through the buttons and a
 
         if(checkForWin(matrix, symbol)){
             alert(`${symbol} has won`)
+            if (symbol ==='X'){
+                player_X++;
+                document.getElementById("player_X").textContent = player_X;
+            }
+            if (symbol ==='O'){
+                player_O++;
+                document.getElementById("player_O").textContent = player_O;
+            }
             reset()
         }
 
         if(checkforTie(coArray)){
             alert("no body won it was a Tie!")
         }
+       
+      
         
     }
 );

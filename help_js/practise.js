@@ -169,7 +169,7 @@ let sortArr1 = arr1.sort();
 //Write a JavaScript program to find the most frequent item of an array 
 //מה הערך שחוזר על עצמו הכי הרבה פעמים 
 
-let arr2 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3,3,3,3,3,3];
+let arr2 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3, 3, 3, 3, 3, 3];
 //let str = arr2.toString();
 let counter_big = 1;
 let counter = 0;
@@ -181,10 +181,10 @@ for (let i = 0; i < arr2.length; i++) {
             counter++
         }
         if (counter_big < counter) {
-            counter_big  = counter;
+            counter_big = counter;
             save = arr2[i];
         }
-        
+
     }
     counter = 0;
 }
@@ -195,11 +195,11 @@ for (let i = 0; i < arr2.length; i++) {
 
 let a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
 
-for(let i = 0; i < a.length;i++){ //הוצאת אלממנט מתחיל מתור 0
+for (let i = 0; i < a.length; i++) { //הוצאת אלממנט מתחיל מתור 0
     //console.log("row " + i);
-    for (let j = 0; j < a[i].length ;j++){ // הוצאת אלמנט מתחיל מהשורה 0
-       // console.log("culom " + a[i][j])
-        
+    for (let j = 0; j < a[i].length; j++) { // הוצאת אלמנט מתחיל מהשורה 0
+        // console.log("culom " + a[i][j])
+
     }
 }
 
@@ -207,24 +207,67 @@ for(let i = 0; i < a.length;i++){ //הוצאת אלממנט מתחיל מתור 
 //exercise 11
 //Write a JavaScript program to compute the sum and product of an array of integers
 
-let integerNum = [1,2,3,4,5,6];
-let x = 0;
-let y = 1;
-;
-function sumOfElement (arry){
-    for( let int in arry){// לולאה שתעבור איבר איבר בתוך המערך
-        x += arry[int]; //מערך שיחבר את כל האיברים 
-        y *= arry[int];//צערך שיכפיל את כל האיברים 
-        
+let integerNum = [1, 2, 3, 4, 5, 6];
+let integer_x = 0;
+let integer_y = 1;
+
+function sumOfElement(arry) {
+    for (let int in arry) {// לולאה שתעבור איבר איבר בתוך המערך
+        integer_x += arry[int]; //מערך שיחבר את כל האיברים 
+        integer_y *= arry[int];//צערך שיכפיל את כל האיברים 
+
     }
-    console.log(`sum ${x} + dabule ${y}`)
+    console.log(`sum ${integer_x} + dabule ${integer_y}`)
 }
 
-sumOfElement(integerNum);
+//sumOfElement(integerNum);
+//---------------------------------------------------------------------
+//exercise 12
+//Write a JavaScript program to add items in an blank array and display the items
 
 
 
+let arr3 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3, 3, 3, 3, 3, 3];
+// by using new Set-אופציה 1
+let remove1 = [...new Set(arr3)]; // new Set=מחזיר ערכים ללא שיכפולים 
+//console.log(remove1);
+//אופציה 2
+let remove2 = Array.from(new Set(arr3));
+//console.log(remove2);
+//  by using filter-אופציה 3
+let remove3 = arr3.filter((value, index) => {//פילטר עובר על המערך ומשווה את הערכים 
+    return arr3.indexOf(value) === index;// indexOf-אם הערך שווה לעצמו בתוך המערך הוא יוריד אותו
+}
+);
+//---------------------------------------------------------------------
+//console.log(remove3);
 
+//exercise 13
+//write a js program to find the number of even integers in arry
+let arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 8, 8, 4, 8, 3, 1, 2, 1, 56, 9, 8, 3, 6, 9, 25, 6, 6];
+const numberOfEven = (array) => {
+    let counter = 0;
+    for (let int in array) {
+        if (arr4[int] % 2 == 0) {
+            counter++
+        }
+    }
+    return `the number of even integer is ${counter}`;
+}
+//console.log(numberOfEven(arr4));
+//---------------------------------------------------------------------
 
+//exercise 14
+//write a js program to find the number of even values up to given number
 
+const numberOfEven2 = (num) => {
+    let counter = 0;
+    for (let i = 0; i < num; i++) {
+        if (i % 2 == 0) {
+            counter++;
+        }
+    }
+    return `the number of even integer is ${counter}`;
+}
 
+//console.log(numberOfEven2(30));
