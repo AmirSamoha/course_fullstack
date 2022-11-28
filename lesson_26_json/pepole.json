@@ -1,0 +1,64 @@
+{
+    "Employee_1": {
+        "name": "amir",
+        "lastname": "samoha",
+        "age": 28,
+        "eyesColor": "black",
+        "children": 0
+    },
+    "Employee_2": {
+        "name": "oz",
+        "lastname": "samoha",
+        "age": 31,
+        "eyesColor": "black",
+        "children": 2
+    },
+
+    "Employee_3": {
+        "name": "liron",
+        "lastname": "samoha",
+        "age": 37,
+        "eyesColor": "black",
+        "children": 2
+        
+    },
+    "Employee_4": {
+        "name": "adi",
+        "lastname": "samoha",
+        "age": 28,
+        "eyesColor": "black",
+        "children": 0
+    },
+    "Employee_5": {
+        "name": "eli",
+        "lastname": "samoha",
+        "age": 65,
+        "eyesColor": "brown",
+        "children": 5
+    },
+    "Employee_6": {
+        "name": "osnat",
+        "lastname": "samoha",
+        "age": 60,
+        "eyesColor": "black",
+        "children": 5
+    },
+    "Employee_7": {
+        "name": "segev",
+        "lastname": "samoha",
+        "age": 35,
+        "eyesColor": "black",
+        "children": 2
+    },
+    "Employee_8": {
+        "name": "evi",
+        "lastname": "marko",
+        "age": 31,
+        "eyesColor": "black",
+        "children": 1
+    }
+
+
+
+
+}

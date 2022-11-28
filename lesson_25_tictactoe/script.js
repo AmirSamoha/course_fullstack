@@ -20,6 +20,13 @@ function reset() {
     counter = 0;
 }
 
+function resetAll(){
+    reset();
+    document.getElementById("player_name_X").textContent = "(name)";
+    document.getElementById("player_name_O").textContent = "(name)";
+    document.getElementById("player_X").textContent = 0;
+    document.getElementById("player_O").textContent = 0;
+}
  
 
 
