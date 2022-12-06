@@ -271,3 +271,19 @@ const numberOfEven2 = (num) => {
 }
 
 //console.log(numberOfEven2(30));
+//---------------------------------------------------------------------
+//exercise 14
+//if the year divisin in 4
+ 
+const year = (year) => {
+    if (year % 4 == 0){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+// console.log(year(2020));
+// console.log(year(2022));
+// console.log(year(2021));
+// console.log(year(2024));
