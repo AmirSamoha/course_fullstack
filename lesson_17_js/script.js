@@ -3,14 +3,14 @@
 // let x = 55, y = 5;
 // console.log(Math.floor(Math.random() * (x - y + 1)) + y); //בעזרת פרמטרים נבחר הגרלה ביו שני משתנים 
 
-// function getRandomNumber(max, min) { // הגרלת מספרים בין מספרים בעזרת פונקציה
-//     return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
+function getRandomNumber(max, min) { // הגרלת מספרים בין מספרים בעזרת פונקציה
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-// console.log(getRandomNumber(14, 7));
-// console.log(getRandomNumber(14, 7));
-// console.log(getRandomNumber(14, 7));
-// console.log(getRandomNumber(14, 7));
+console.log(getRandomNumber(14, 7));
+console.log(getRandomNumber(14, 7));
+console.log(getRandomNumber(14, 7));
+console.log(getRandomNumber(14, 7));
 
 
 // let arr = "somePrhase";

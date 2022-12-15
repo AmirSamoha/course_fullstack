@@ -148,3 +148,50 @@ let myRange = (arr) => {
 
 }; // range is the difference between the largest and smallest values of an array
 console.log(myRange(array2));
+
+
+const result2 = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+  };
+  function makeList(arr) {  //פונקציה שלוקלחת מריסולט2 ומדפיסה אותו בתור טבלה עם li
+    "use strict";
+    // change code below this line
+    const failureItems = [];
+    for (let i = 0; i < arr.length; i++) {
+      failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+    }
+    // change code above this line
+    return failureItems;
+  }
+  
+console.log(makeList(result2.failure));
+
+
+
+//Write a JavaScript program to check from three given numbers 
+//(non negative integers) that two or all of them have the same rightmost digit.
+
+const checkSameRight = (num1 , num2 , num3) =>{
+    let num1_first = num1[0];
+    let num2_first = num2[0];
+    let num3_first = num3[0];
+
+    if (num1_first === num2_first){
+        return true;
+    }else if (num1_first === num3_first){
+        return true;
+    }else if (num2_first === num3_first){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(checkSameRight("2111","222","433"));
+
+
+let myString4 = "Hello, World!";
+let myRegex = /Hello/;
+let result5 = myRegex.test(myString4); 
+console.log(result5);

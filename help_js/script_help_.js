@@ -111,25 +111,25 @@
 // }
 
 // // for in loop - loops through the properties of an object
-// let myObject2 = {
-//     key1: "value1",
-//     key2: "value2",
-//     key3: "value3"
-// };
+let myObject2 = {
+    key1: "value1",
+    key2: "value2",
+    key3: "value3"
+};
 
-// for(let i in myObject2) {
-//     console.log(i);
-// }
+for(let i in myObject2) {
+    console.log(myObject2[i]);
+}
 
-// for(let i = 0;  i < Object.keys(myObject2).length; i++){
-//     console.log(myObject2[Object.keys(myObject2)[i]])
-// }
-
-
+for(let i = 0;  i < Object.keys(myObject2).length; i++){
+    console.log(myObject2[Object.keys(myObject2)[i]])
+}
 
 
 
-// // for of loop - loops through the values of an iterable object
+
+
+// for of loop - loops through the values of an iterable object
 // let myArray2 = [1, 2, 3, 4, 5, {name:"may"}];
 
 // for(let value of myArray2) {
