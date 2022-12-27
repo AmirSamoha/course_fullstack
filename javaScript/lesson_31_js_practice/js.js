@@ -40,7 +40,7 @@ async function get_users() {
   }
   return `Q1 ------ ${str} \n counter of users  ${counter}`;
 }
-get_users().then((x) => console.log(x));
+//get_users().then((x) => console.log(x));
 
 // 2.
 // in "data_base_l2.json" and return a list of lists with size 2  -> [[name, age], [name, age], ...]
@@ -56,7 +56,7 @@ async function get_users_age() {
   }
   return arru;
 }
-get_users_age().then((y) => console.log(y));
+//get_users_age().then((y) => console.log(y));
 
 // 3.
 // in "data_base_l3.json"
@@ -75,7 +75,7 @@ async function get_mail() {
   }
   return arru;
 }
-get_mail().then((w) => console.log(w));
+//get_mail().then((w) => console.log(w));
 
 // Q3:
 // 1. create a login page (you can reuse the code from the previous lesson)
@@ -83,41 +83,41 @@ get_mail().then((w) => console.log(w));
 // 3. if the user is logged in, show a welcome message and table of all users in
 // "data_base_l3.json" and their emails
 
-// let mountains = [
-//   { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
-//   { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
-//   { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
-//   { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
-//   { name: "Monte Amiata", height: 1738, place: "Siena" },
-// ];
 
-// function generateTable(table, data) {
-//   for (let element of data) {
-//     let row = table.insertRow();
-//     for (key in element) {
-//       let cell = row.insertCell();
-//       let text = document.createTextNode(element[key]);
-//       cell.appendChild(text);
-//     }
-//   }
-// }
 
-// let table = document.querySelector("table");
-// let data = Object.keys(mountains[0]);
-// generateTable(table, mountains);
-
-async function get_table(table) {
+async function get_table() {
     const response = await fetch("./data_base_l3.json");
     const data = await response.json();
-    for (let element of data.users) {
-        let row = table.insertRow();
-        for (key in element) {
-          let cell = row.insertCell();
-          let text = document.createTextNode(element[key]);
-          cell.appendChild(text);
+    console.log(data);
+    for (let key in data.users) {
+      console.log(data.users[key]);
+      let tr = document.createElement("tr");
+        for (let i in data.users[key]){
+          console.log(data.users[key][i]);
+          let td = document.createElement("td");
+          td.appendChild(document.createTextNode(data.users[key][i]));
+          tr.appendChild(td);
+          console.log(tr);
+          
         }
-      }
+        let td = document.createElement("td");
+        td.appendChild(document.createTextNode(data.users[key].name + "_" + data.users[key].last_name + "@gmail.com"));
+        tr.appendChild(td);
+        document.getElementById("tableData").appendChild(tr);
+        document.getElementById("tableData").style.border = "1px solid";
+        
+    }
+
 }
 //   data_a.users[key].name + "_" + data_a.users[key].last_name + "@gmail.com"
-let table = document.querySelector("table");
-get_table(table);
+const adminCheck = () => {
+  const user = document.getElementById("name").value;
+  const password = document.getElementById("password").value;
+  if (user === "admin" && password === "1234") {
+    get_table();
+  }else{
+    alert(`${user} You do not have the appropriate permissions`)
+  }
+}
+
+
